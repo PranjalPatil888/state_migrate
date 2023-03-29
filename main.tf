@@ -65,7 +65,7 @@ resource "aws_route_table" "demo-rt" {
     gateway_id = aws_internet_gateway.demo-igw.id
   }
   tags = {
-    Name = "demo-rt new"
+    Name = "demo-rt new latest"
   }
 }
 
