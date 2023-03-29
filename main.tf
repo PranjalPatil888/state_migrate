@@ -40,7 +40,7 @@ resource "aws_subnet" "demo_subnet" {
   availability_zone = var.subent_az
 
   tags = {
-    Name = "demo_subnet"
+    Name = "demo_subnet updated"
   }
 }
 
