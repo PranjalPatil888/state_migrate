@@ -32,7 +32,7 @@ vpc_security_group_ids = [aws_security_group.demo-vpc-sg.id]
 resource "aws_vpc" "demo-vpc" {
   cidr_block = var.vpc-cidr
    tags = {
-    Name = "demo_vpc latest"
+    Name = "demo_vpc latest from demo"
   }
 }
 
