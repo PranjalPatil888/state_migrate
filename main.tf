@@ -31,6 +31,9 @@ vpc_security_group_ids = [aws_security_group.demo-vpc-sg.id]
 // Create VPC
 resource "aws_vpc" "demo-vpc" {
   cidr_block = var.vpc-cidr
+   tags = {
+    Name = "demo_vpc latest from demo"
+  }
 }
 
 // Create Subnet
@@ -40,7 +43,7 @@ resource "aws_subnet" "demo_subnet" {
   availability_zone = var.subent_az
 
   tags = {
-    Name = "demo_subnet"
+    Name = "demo_subnet updated 3 april"
   }
 }
 
@@ -50,7 +53,7 @@ resource "aws_internet_gateway" "demo-igw" {
   vpc_id = aws_vpc.demo-vpc.id
 
   tags = {
-    Name = "demo-igw"
+    Name = "demo-igw-updated"
   }
 }
 
@@ -62,7 +65,7 @@ resource "aws_route_table" "demo-rt" {
     gateway_id = aws_internet_gateway.demo-igw.id
   }
   tags = {
-    Name = "demo-rt new"
+    Name = "demo-rt new latest"
   }
 }
 
